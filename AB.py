@@ -13,6 +13,7 @@ def alphabeta(node, depth, alpha, beta, maximizing_player, terminal_nodes, tree,
                 max_value = value
                 max_path = child_path
             alpha = max(alpha, value)
+            print(f"Alpha: {alpha}, Beta: {beta}")
             if beta <= alpha:
                 break
         return max_value, max_path
@@ -25,6 +26,7 @@ def alphabeta(node, depth, alpha, beta, maximizing_player, terminal_nodes, tree,
                 min_value = value
                 min_path = child_path
             beta = min(beta, value)
+            print(f"Alpha: {alpha}, Beta: {beta}")
             if beta <= alpha:
                 break
         return min_value, min_path
